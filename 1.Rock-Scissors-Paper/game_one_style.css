@@ -1,0 +1,380 @@
+/* architects-daughter-regular - latin */
+@font-face {
+    font-family: 'Architects Daughter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/1.Rock-Scissors-Paper/fonts/architects-daughter-v18-latin-regular.eot');
+    /* IE9 Compat Modes */
+    src: local(''),
+        /* IE6-IE8 */
+        url('/1.Rock-Scissors-Paper/fonts/architects-daughter-v18-latin-regular.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('/fonts/architects-daughter-v18-latin-regular.woff') format('woff'),
+        /* Modern Browsers */
+        url('/fonts/architects-daughter-v18-latin-regular.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+        url('/fonts/architects-daughter-v18-latin-regular.svg') format('svg');
+    /* Legacy iOS */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg, #9c27b0, #8ecdff);
+}
+
+.main {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.title{
+    font-family: 'Architects Daughter';
+    margin: 25px 0;
+    font-size: 50px;
+    color: #31003a;
+    text-shadow: 0 0 10px #00ffd0;
+}
+
+.game-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 500px;
+    height: 350px;
+    padding: 30px;
+    border: 1px solid hsla(291, 100%, 11%, 0.5);
+    box-shadow: 0 0 20px #8ecdff;
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+.choise-box{
+    position: relative;
+    height: 40%;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 0;
+    border: 1px solid hsla(291, 100%, 11%, 0.5);
+    box-shadow: inset 0 0 10px hsla(291, 100%, 11%, 0.5);
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.choise-box-title{
+    font-size: 30px;
+}
+
+.game-box h2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.choise-box h3{
+    margin-bottom: 15px;
+}
+
+.grid-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 110px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    width: 100px;
+    height: 55px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    box-shadow: 0 0 3px #ffffff;
+    color: #fff;
+    transition: .4s;
+}
+
+
+.button:hover{
+    width: 120px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ffffff;
+}
+
+.rock, 
+.paper,
+.scissors{
+    background-repeat: no-repeat !important;
+    background-position: 50% 10% !important;
+}
+.rock{
+    background: url(/1.Rock-Scissors-Paper/img/building-3-fill.png);
+}
+.paper{
+    background: url(/1.Rock-Scissors-Paper/img/file-paper-2-line.png);
+}
+.scissors{
+    background: url(/1.Rock-Scissors-Paper/img/scissors-2-line.png);
+}
+
+
+/*Animation */
+
+.choise-box span{
+    position: absolute;
+    display: block;
+}
+
+.choise-box span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.choise-box span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.3s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.choise-box span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.choise-box span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+/* MEDIA */
+@media screen and (max-width: 600px) {
+
+    .main{
+        justify-content: flex-start;
+    }
+
+    .title{
+        padding: 0 50px;
+        font-size: 35px;
+    }
+    
+    .game-box{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        font-size: 12px;
+        justify-content: space-between;
+    }
+    
+    .choise-box{
+        height: 200px;
+        margin-top: 20px;
+        padding: 10px 0;
+        border: 2px solid hsla(291, 100%, 11%, 0.5);
+        box-shadow: inset 0 0 10px hsla(291, 100%, 11%, 0.5);
+        border-radius: 5px;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .choise-box-title {
+        font-size: 17px;
+    }
+    
+    .grid-buttons {
+        display: inline-flex;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 180px;
+        height: 60px;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 14px;
+        text-transform: uppercase;
+        box-shadow: 0 0 5px #ffffff;
+        transition: .4s;
+    }
+    
+    .rock,
+    .paper,
+    .scissors {
+        background-repeat: no-repeat !important;
+        background-position: 10% 50% !important;
+    }
+    
+    .button:hover{
+        width: 150px;
+        letter-spacing: 0;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 470px) {
+
+    .title {
+        padding: 0 25px;
+        font-size: 30px;
+    }
+}
+
+/* MEDIA */
+@media screen and (max-width: 355px) {
+
+    .title {
+        padding: 0 15px;
+        font-size: 25px;
+    }
+
+    .button{
+        width: 170px;
+    }
+}
+
+/* js */
+#user-choice,
+#computer-choice{
+    text-transform: uppercase;
+}
+/* win */
+.win .choise-box{
+    box-shadow: inset 0 0 10px hsla(132, 100%, 50%, 0.55);
+}
+.win #result{
+    font-family: 'Architects Daughter';
+    background: #00858d;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+.win .choise-box span:nth-child(1){
+    background: linear-gradient(90deg, transparent, #00ff33);
+}
+.win .choise-box span:nth-child(2){
+    background: linear-gradient(180deg, transparent, #00ff33);
+}
+.win .choise-box span:nth-child(3){
+    background: linear-gradient(270deg, transparent, #00ff33);
+}
+.win .choise-box span:nth-child(4){
+    background: linear-gradient(360deg, transparent, #00ff33);
+}
+
+/* lose */
+.lose .choise-box {
+    box-shadow: inset 0 0 10px hsla(324, 100%, 28%, 0.55);
+}
+.lose #result {
+    font-family: 'Architects Daughter';
+    background: #8d0055;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+.lose .choise-box span:nth-child(1){
+    background: linear-gradient(90deg, transparent, #ff3300);
+}
+.lose .choise-box span:nth-child(2){
+    background: linear-gradient(180deg, transparent, #ff3300);
+}
+.lose .choise-box span:nth-child(3){
+    background: linear-gradient(270deg, transparent, #ff3300);
+}
+.lose .choise-box span:nth-child(4){
+    background: linear-gradient(360deg, transparent, #ff3300);
+}
+.its-a-draw .choise-box {
+    box-shadow: inset 0 0 10px hsla(195, 100%, 64%, 0.703);
+}
+.its-a-draw #result {
+    font-family: 'Architects Daughter';
+    background: #007dc6;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
