@@ -1,3 +1,3 @@
 Click and start playing!
 
-https://have-fun-eight.vercel.app/
+https://my-js-games.vercel.app/
