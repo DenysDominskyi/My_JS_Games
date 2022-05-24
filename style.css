@@ -70,12 +70,19 @@ a{
     align-items: center;
     text-align: center;
     text-transform: uppercase;
-    color: #dde5ff;
     font-size: 22px;
     letter-spacing: 2px;
     transition: .4s;
     z-index: 1;
 }
+.title.white{
+    color: #dde5ff;
+}
+
+.title.yellow{
+    color: #2F80ED;
+}
+
 .title:hover{
     font-size: 25px;
     letter-spacing: 5px;
@@ -114,4 +121,9 @@ a{
 .one{
     background: linear-gradient(135deg, #56CCF2, #2F80ED);
     animation-duration: .8s;
+}
+
+.two{
+    background: linear-gradient(270deg, #56ab2f, #a8e063);
+    animation-duration: .4s;
 }

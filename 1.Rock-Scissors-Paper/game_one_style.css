@@ -226,6 +226,35 @@ body{
     }
 }
 
+.first-button{
+    border: none;
+    width: 80px;
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: #926dc9;
+    box-shadow: none;
+    border: none;
+    
+    transition: .4s;
+}
+.first-button a{
+    text-decoration: none;
+    padding: 7px 15px;
+    color: #fff;
+    font-size: 17px;
+    letter-spacing: 2px;
+    transition: .4s;
+}
+.first-button:hover{
+    box-shadow: inset 0 0 4px #271e35;
+    background: #926dc9;
+}
+.first-button:hover a{
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
 /* MEDIA */
 @media screen and (max-width: 600px) {
 

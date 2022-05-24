@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(#C6FFDD, #FBD786, #f7797d);
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 18px;
+}
+.memory_container{
+    position: relative;
+    margin: 0 auto;
+    height: 100vh;
+    padding: 0 10px;
+    text-align: center;
+    overflow: hidden;
+}
+.memory_container::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66, 
+    #00ffff, #ff00ff, #6e0dd0,  #099fff);
+    top: -100%;
+    left: -100%;
+    transform: translate(-45deg);
+    width: 300%;
+    height: 300%;
+    z-index: -1;
+    overflow: hidden;
+    animation: animate 5s linear infinite
+}
+@keyframes animate{
+    0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+}
+
+#grid{
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+#grid img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+}
+
+.memory_buttons{
+    border: none;
+    color: #ffffff;
+    width: 100px;
+    height: 40px;
+    margin: 20px;
+    border-radius: 3px;
+    background-color: #099fff;
+    transition: .4s;
+}
+.memory_buttons:hover{
+    box-shadow: inset 0 0 10px #004a78;
+    background-color: #25abff;
+}
+
+@media screen  and (max-width: 460px) {
+    #grid{
+    width: 300px;
+    }
+
+    #grid img{
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    }
+    .memory_buttons{
+        margin: 0;
+    }
+}
