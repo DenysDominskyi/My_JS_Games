@@ -83,6 +83,14 @@ a{
     color: #2F80ED;
 }
 
+.title.red{
+    color: #ec4545;
+}
+
+.title.black{
+    color: #2d2d2d;
+}
+
 .title:hover{
     font-size: 25px;
     letter-spacing: 5px;
@@ -126,4 +134,9 @@ a{
 .two{
     background: linear-gradient(270deg, #56ab2f, #a8e063);
     animation-duration: .4s;
+}
+
+.three{
+    background: linear-gradient(#f7ff00, #db36a4);
+    animation-duration: .6s;
 }

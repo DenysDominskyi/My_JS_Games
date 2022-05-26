@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    text-align: center;
+    background: linear-gradient(95deg, #0f0c29, #302b63, #24243e);
+    padding: 15px;
+    height: 100vh;
+}
+.container h2{
+    color: #c0e1ff;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: max-content;
+    margin: 30px auto 50px auto;
+    background: rgb(255, 255, 255);
+    gap: 1px;
+    border: 1px solid #c0e1ff;
+    border-radius: 3px;
+    box-shadow: 0 0 15px #c0e1ff;
+}
+
+.square{
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(#667db6, #0082c8, #0082c8, #667db6);
+    border-radius: 3px;
+}
+
+.mole{
+    background-image: url(/3.Whac-a-mole/mole.jpg);
+    background-size: cover;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 10px;
+}
+
+.btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #54c3ff;
+    color: #24243e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px #0f0c29;
+    font-size: 15px;
+    transition: .4s;
+}
+.btn:hover{
+    background-color: #39baff;
+    font-size: 14px;
+    padding: 9px 18px;
+    box-shadow: 2px 2px 10px #0f0c29;
+}
+
+@media screen and (max-width: 600px) {
+    .square{
+        height: 70px;
+        width: 70px;
+    }
+
+    .info{
+        display: flex;
+        gap: 10px;
+    }
+    
+    .grid {
+        margin: 30px auto 30px auto;
+    }
+
+}
