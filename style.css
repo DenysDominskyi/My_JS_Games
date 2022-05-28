@@ -79,7 +79,7 @@ a{
     color: #dde5ff;
 }
 
-.title.yellow{
+.title.blue{
     color: #2F80ED;
 }
 
@@ -138,5 +138,10 @@ a{
 
 .three{
     background: linear-gradient(#f7ff00, #db36a4);
+    animation-duration: .6s;
+}
+
+.four{
+    background: linear-gradient(135deg, #333333, #dd1818);
     animation-duration: .6s;
 }
