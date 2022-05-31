@@ -106,13 +106,13 @@ const buttonRight = document.querySelector('.right')
 
 function moveUserLeft() {
     if (currentPosition[0] > 0) {
-            currentPosition[0] -= 10
+            currentPosition[0] -= 40
             drawUser()
     }
 }
 function moveUserRight() {
     if (currentPosition[0] < boardWidth - blockWidth) {
-        currentPosition[0] += 10
+        currentPosition[0] += 40
         drawUser()
     }
 }
