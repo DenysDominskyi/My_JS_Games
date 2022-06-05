@@ -84,7 +84,7 @@ a{
 }
 
 .title.red{
-    color: #ec4545;
+    color: #b62b2b;
 }
 
 .title.black{
@@ -132,7 +132,7 @@ a{
 }
 
 .two{
-    background: linear-gradient(270deg, #56ab2f, #a8e063);
+    background: linear-gradient(270deg, #fc5863, #d167fa);
     animation-duration: .4s;
 }
 
@@ -144,4 +144,8 @@ a{
 .four{
     background: linear-gradient(135deg, #333333, #dd1818);
     animation-duration: .6s;
+}
+
+.five{
+    background: linear-gradient(270deg, #56ab2f, #a8e063);
 }

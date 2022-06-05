@@ -1,0 +1,13 @@
+.querySelector()
+.querySelectorAll()
+.classList.add()
+.classList.remove()
+.classList.contains()
+switch()
+e.key
+.forEach()
+setInterval()
+clearInterval()
+.addEventListener()
+.removeEventListener()
+.textContent
