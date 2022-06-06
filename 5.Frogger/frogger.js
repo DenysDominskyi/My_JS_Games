@@ -6,7 +6,10 @@ const logsLeft = document.querySelectorAll('.log-left')
 const logsRight = document.querySelectorAll('.log-right')
 const carsLeft = document.querySelectorAll('.car-left')
 const carsRight = document.querySelectorAll('.car-right')
-
+const up = document.querySelector('.up')
+const down = document.querySelector('.down')
+const left = document.querySelector('.left')
+const right = document.querySelector('.right')
 
 console.log(squares)
 
@@ -16,6 +19,41 @@ let timerId
 let outcomeTimerId
 let currentTime = 20
 
+// button move
+
+function moveUp() {
+    squares[currentIndex].classList.remove('frog')
+    if(currentIndex - width >= 0)
+        currentIndex -= width
+    squares[currentIndex].classList.add('frog')
+}
+
+
+function moveDown() {
+    squares[currentIndex].classList.remove('frog')
+    if(currentIndex + width < width * width)
+        currentIndex += width
+    squares[currentIndex].classList.add('frog')
+}
+
+
+function moveLeft() {
+    squares[currentIndex].classList.remove('frog')
+    if(currentIndex % width !== 0)
+        currentIndex -= 1
+    squares[currentIndex].classList.add('frog')
+}
+
+
+function moveRight() {
+    squares[currentIndex].classList.remove('frog')
+    if(currentIndex % width < width - 1)
+        currentIndex += 1
+    squares[currentIndex].classList.add('frog')
+}
+
+
+// keyboar move
 function moveFrog(e) {
     squares[currentIndex].classList.remove('frog')
 
@@ -152,6 +190,10 @@ function lose() {
         clearInterval(outcomeTimerId)
         squares[currentIndex].classList.remove('frog')
         document.removeEventListener('keyup', moveFrog)
+        up.removeEventListener('click', moveUp)
+        down.removeEventListener('click', moveDown)
+        left.removeEventListener('click', moveLeft)
+        right.removeEventListener('click', moveRight)
     }
 }
 
@@ -160,6 +202,10 @@ function win() {
         resultDisplay.textContent = 'You Win!'
         clearInterval(timerId)
         document.removeEventListener('keyup', moveFrog)
+        up.removeEventListener('click', moveUp)
+        down.removeEventListener('click', moveDown)
+        left.removeEventListener('click', moveLeft)
+        right.removeEventListener('click', moveRight)
     }
 }
 
@@ -170,11 +216,19 @@ startPauseButton.addEventListener('click', () => {
          outcomeTimerId = null
         timerId = null
         document.removeEventListener('keyup', moveFrog)
+        up.removeEventListener('click', moveUp)
+        down.removeEventListener('click', moveDown)
+        left.removeEventListener('click', moveLeft)
+        right.removeEventListener('click', moveRight)
 
     } else {
         timerId = setInterval(autoMoveElements, 500)
         outcomeTimerId = setInterval(checkOutComes, 50)
         document.addEventListener('keyup', moveFrog)
+        up.addEventListener('click', moveUp)
+        down.addEventListener('click', moveDown)
+        left.addEventListener('click', moveLeft)
+        right.addEventListener('click', moveRight)
     }
 })
 
